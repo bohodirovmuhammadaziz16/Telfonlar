@@ -1,0 +1,6 @@
+{
+  "name": "MobilSphere — 3D Smartfon Studiyasi",
+  "description": "Sketchfab 3D modellar asosida smartfon rang va xususiyatlarini sozlash hamda Telegram kanalga avtomatik buyurtma yuborish platformasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MobilSphere — 3D Smartfon Studiyasi va Konfigurator</title>
+    <meta
+      name="description"
+      content="Smartfonlarni 3D Sketchfab studiyasida aylantirib ko'ring, rang va xotira xususiyatlarini sozlang va Telegram orqali bir zumda buyurtma bering."
+    />
+    <meta property="og:title" content="MobilSphere — 3D Smartfon Studiyasi va Konfigurator" />
+    <meta
+      property="og:description"
+      content="Smartfonlarni 3D Sketchfab studiyasida aylantirib ko'ring, rang va xotira xususiyatlarini sozlang va Telegram orqali bir zumda buyurtma bering."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js" defer></script>
+  </head>
+  <body>
+    <a href="#hero" class="skip-link">Asosiy kontentga o'tish</a>
+
+    <!-- Top Navigation Bar (Strict 3-Zone Contract) -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="#hero" class="brand-wordmark">MobilSphere</a>
+
+        <nav class="main-nav" aria-label="Asosiy navigatsiya">
+          <a href="#catalog" class="nav-link">Katalog</a>
+          <a href="#specs" class="nav-link">Xususiyatlar</a>
+          <a href="#guarantee" class="nav-link">Kafolat</a>
+          <a href="#studio" class="nav-link">3D Studiya</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="btn-primary header-cart-btn"
+            id="openCartBtn"
+            aria-label="Savat va buyurtma oynasini ochish"
+          >
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+              <path d="M3 6h18" />
+              <path d="M16 10a4 4 0 0 1-8 0" />
+            </svg>
+            <span>Savat</span>
+            <span class="cart-count tabular-nums" id="headerCartCount">0</span>
+          </button>
+
+          <button
+            type="button"
+            class="mobile-menu-toggle"
+            id="mobileMenuBtn"
+            aria-label="Menyuni ochish"
+            aria-expanded="false"
+            aria-controls="mobileNavDrawer"
+          >
+            <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <nav class="mobile-nav" id="mobileNavDrawer" aria-label="Mobil navigatsiya" hidden>
+        <a href="#catalog" class="mobile-nav-link">Katalog</a>
+        <a href="#specs" class="mobile-nav-link">Xususiyatlar</a>
+        <a href="#guarantee" class="mobile-nav-link">Kafolat</a>
+        <a href="#studio" class="mobile-nav-link">3D Studiya</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Section 1: Storefront Opening Hero (Clearly shows phones are sold here) -->
+      <section class="store-hero" id="hero">
+        <div class="container">
+          <div class="store-hero-grid">
+            <div class="store-hero-copy">
+              <p class="eyebrow-text">MobilSphere Smartfonlar Do'koni · Toshkent</p>
+              <h1 class="hero-title">Original smartfonlarni rasmiy kafolat bilan xarid qiling</h1>
+              <p class="store-hero-desc">
+                Apple va Samsung flagman smartfonlari eng qulay narxlarda. Barcha qurilmalar UzIMEI ro'yxatidan o'tgan, 12 oylik rasmiy kafolat va Toshkent bo'ylab 2 soat ichida bepul yetkazib berish xizmati bilan.
+              </p>
+
+              <div class="store-hero-actions">
+                <a href="#catalog" class="btn-primary">Smartfonlarni tanlash</a>
+                <a href="#studio" class="btn-secondary">3D studiyada ko'rish</a>
+              </div>
+            </div>
+
+            <div class="store-hero-visual">
+              <div class="hero-showcase-card">
+                <img
+                  src="/src/assets/images/phone_iphone_16_pro_max_1795518246668.jpg"
+                  alt="Apple va Samsung flagman smartfonlari sotuvda"
+                  class="hero-showcase-img"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="hero-showcase-bar">
+                  <div>
+                    <div class="hero-showcase-meta">Sotuvda mavjud · Flagmanlar</div>
+                    <div class="hero-showcase-name">iPhone 16 Pro Max · Galaxy S25 Ultra</div>
+                  </div>
+                  <a href="#catalog" class="hero-showcase-price tabular-nums">$590 dan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="store-trust-strip">
+            <div class="trust-cell">
+              <span class="trust-title">100% Original va UzIMEI</span>
+              <span class="trust-sub">Qadoqlangan rasmiy qurilmalar</span>
+            </div>
+            <div class="trust-cell">
+              <span class="trust-title">2 soatda bepul yetkazish</span>
+              <span class="trust-sub">Toshkent bo'ylab tezkor kuryer</span>
+            </div>
+            <div class="trust-cell">
+              <span class="trust-title">Naqd, Click/Payme va bo'lib to'lash</span>
+              <span class="trust-sub">Tekshirib ko'rgandan so'ng to'lov</span>
+            </div>
+            <div class="trust-cell">
+              <span class="trust-title">Telegram orqali jonli tasdiq</span>
+              <span class="trust-sub">Buyurtma bir zumda rasmiylashtiriladi</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Flagship Catalog Grid -->
+      <section class="catalog-section" id="catalog">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="section-title">Sotuvdagi smartfonlar katalogi</h2>
+              <p class="section-subtitle">
+                O'zingizga yoqqan modelni tanlang, savatga qo'shing yoki pastdagi 3D studiyada rangini va xotirasini sozlang.
+              </p>
+            </div>
+
+            <div class="catalog-controls">
+              <div class="filter-tabs" role="tablist" aria-label="Brend bo'yicha saralash" id="brandFilters">
+                <button type="button" class="filter-tab is-active" data-brand="all">Barchasi</button>
+                <button type="button" class="filter-tab" data-brand="Apple">Apple</button>
+                <button type="button" class="filter-tab" data-brand="Samsung">Samsung</button>
+                <button type="button" class="filter-tab" data-brand="Bukiladigan">Bukiladigan</button>
+              </div>
+
+              <label class="search-field">
+                <span class="sr-only">Smartfon qidirish</span>
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
+                <input
+                  type="search"
+                  id="catalogSearchInput"
+                  placeholder="Model nomi yoki protsessor..."
+                  autocomplete="off"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="catalog-grid" id="catalogGrid"></div>
+          <div class="catalog-empty" id="catalogEmpty" hidden>
+            <p>Qidiruv bo'yicha mos smartfon topilmadi. Filterni tozalab qayta urinib ko'ring.</p>
+            <button type="button" class="btn-secondary" id="resetFiltersBtn">Barchasini ko'rsatish</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Technical Specs & Service Guarantee -->
+      <section class="specs-section" id="specs">
+        <div class="container">
+          <div class="specs-layout">
+            <div class="specs-detail-col">
+              <h2 class="section-title" id="specsSectionHeading">Texnik xususiyatlar</h2>
+              <p class="section-subtitle" id="specsSectionSub">
+                Tanlangan konfiguratsiya asosidagi aniq texnik ko'rsatkichlar.
+              </p>
+
+              <dl class="specs-table" id="detailedSpecsTable"></dl>
+            </div>
+
+            <div class="guarantee-col" id="guarantee">
+              <h2 class="section-title">Xizmat va kafolat</h2>
+              <p class="section-subtitle">
+                Har bir buyurtma to'liq tekshiruvdan o'tkazilib, Telegram orqali real vaqtda tasdiqlanadi.
+              </p>
+
+              <div class="guarantee-list">
+                <div class="guarantee-item">
+                  <h3 class="guarantee-title">100% Rasmiy IMEI va Kafolat</h3>
+                  <p class="guarantee-desc">
+                    Barcha qurilmalar UzIMEI tizimida ro'yxatdan o'tgan va 12 oylik rasmiy servis kafolati bilan taqdim etiladi.
+                  </p>
+                </div>
+
+                <div class="guarantee-item">
+                  <h3 class="guarantee-title">Toshkent bo'ylab 2 soatda yetkazish</h3>
+                  <p class="guarantee-desc">
+                    Buyurtma Telegram kanalimizga tushgan zahoti operator tasdiqlaydi va kuryer manzilingizga yetkazadi.
+                  </p>
+                </div>
+
+                <div class="guarantee-item">
+                  <h3 class="guarantee-title">Qabul qilishdan oldin tekshirish</h3>
+                  <p class="guarantee-desc">
+                    Kuryer oldida qadoqni ochib, tanlangan rang, xotira va kamera ishlashini tekshirgan holda to'lov qiling.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 (Bottom): 3D Studiya & Konfigurator -->
+      <section class="studio-section" id="studio">
+        <div class="container">
+          <div class="studio-intro">
+            <p class="eyebrow-text">Interaktiv Sketchfab 3D Ko'rgazma · Rang va Xotira Sozlamasi</p>
+            <h2 class="section-title">Smartfonni 3D studiyada aylantirib ko'ring</h2>
+          </div>
+
+          <!-- Model Quick Switcher -->
+          <div class="model-switcher-bar" role="tablist" aria-label="Smartfon modellarini tanlash" id="modelTabs"></div>
+
+          <div class="studio-grid">
+            <!-- Left: Interactive 3D Sketchfab & CSS 3D Stage -->
+            <div class="stage-column">
+              <div class="stage-card" id="stageCard">
+                <div class="stage-ambient-glow" id="stageGlow" aria-hidden="true"></div>
+
+                <!-- Live Sketchfab 3D Embed -->
+                <div class="sketchfab-wrap" id="sketchfabWrap">
+                  <iframe
+                    id="sketchfabFrame"
+                    title="3D Smartfon Modeli"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    allowfullscreen
+                    loading="lazy"
+                    src=""
+                  ></iframe>
+
+                  <!-- Polished Loading Backdrop while WebGL boots -->
+                  <div class="stage-loader" id="stageLoader">
+                    <div class="loader-ring" aria-hidden="true"></div>
+                    <p class="loader-label">3D Sketchfab modeli yuklanmoqda...</p>
+                  </div>
+                </div>
+
+                <!-- Interactive CSS 3D Studio Mode (Instant Toggle / Fallback) -->
+                <div class="css3d-wrap" id="css3dWrap" hidden>
+                  <div class="css3d-scene" id="css3dScene">
+                    <div class="css3d-phone" id="css3dPhone">
+                      <div class="css3d-face css3d-front">
+                        <img
+                          id="css3dImage"
+                          src=""
+                          alt=""
+                          referrerpolicy="no-referrer"
+                          class="css3d-photo"
+                        />
+                        <div class="css3d-tint-overlay" id="css3dTint"></div>
+                        <div class="css3d-sheen"></div>
+                      </div>
+                      <div class="css3d-edge css3d-edge-right"></div>
+                      <div class="css3d-edge css3d-edge-left"></div>
+                    </div>
+                  </div>
+                  <p class="css3d-hint">Sichqoncha yoki barmoq bilan 3D burish mumkin</p>
+                </div>
+
+                <!-- 3D Viewport Bottom Controls Bar -->
+                <div class="stage-toolbar">
+                  <div class="stage-camera-group" role="group" aria-label="3D kamera burchaklari">
+                    <button type="button" class="stage-ctrl-btn is-active" data-cam="spin" id="btnCamSpin">
+                      360° Aylanish
+                    </button>
+                    <button type="button" class="stage-ctrl-btn" data-cam="front">
+                      Old tomon
+                    </button>
+                    <button type="button" class="stage-ctrl-btn" data-cam="camera">
+                      Kamera bloki
+                    </button>
+                    <button type="button" class="stage-ctrl-btn" data-cam="side">
+                      Yon qirra
+                    </button>
+                  </div>
+
+                  <div class="stage-mode-group">
+                    <button type="button" class="stage-mode-btn" id="toggleViewModeBtn">
+                      3D Karta rejimi
+                    </button>
+                    <a
+                      href="https://sketchfab.com/tags/phone"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="stage-source-link"
+                      id="sketchfabExternalLink"
+                    >
+                      Sketchfab manba
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Selected Variant Live HUD Bar -->
+                <div class="stage-hud">
+                  <div class="hud-item">
+                    <span class="hud-label">Model</span>
+                    <span class="hud-value" id="hudModelName">iPhone 16 Pro Max</span>
+                  </div>
+                  <div class="hud-item">
+                    <span class="hud-label">Rang</span>
+                    <span class="hud-value" id="hudColorName">Cho'l Titani</span>
+                  </div>
+                  <div class="hud-item">
+                    <span class="hud-label">Xotira</span>
+                    <span class="hud-value tabular-nums" id="hudStorageName">256 GB · 8 GB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Contiguous Purchase & Customization Module -->
+            <aside class="configurator-column" aria-label="Smartfon konfiguratori">
+              <div class="config-panel">
+                <div class="config-header">
+                  <div class="config-meta-line" id="configMetaLine">Apple · Flagman · Mavjud</div>
+                  <h2 class="config-title" id="configTitle">iPhone 16 Pro Max</h2>
+                  <p class="config-tagline" id="configTagline">
+                    Grade 5 titan korpus, A18 Pro chip va 5x optik zumli pro kamera tizimi.
+                  </p>
+                </div>
+
+                <!-- 1. Color Customizer -->
+                <div class="config-block">
+                  <div class="config-block-head">
+                    <span class="config-label">Korpus rangi</span>
+                    <span class="config-selected-val" id="selectedColorLabel">Cho'l Titani</span>
+                  </div>
+                  <div class="color-swatch-grid" id="colorSwatches" role="radiogroup" aria-label="Korpus rangini tanlash"></div>
+                </div>
+
+                <!-- 2. Storage & RAM Customizer -->
+                <div class="config-block">
+                  <div class="config-block-head">
+                    <span class="config-label">Xotira va Operativ xotira</span>
+                    <span class="config-selected-val tabular-nums" id="selectedStorageLabel">256 GB · 8 GB RAM</span>
+                  </div>
+                  <div class="option-grid" id="storageOptions" role="radiogroup" aria-label="Xotira hajmini tanlash"></div>
+                </div>
+
+                <!-- 3. SIM & Region Customizer -->
+                <div class="config-block">
+                  <div class="config-block-head">
+                    <span class="config-label">SIM karta va hudud</span>
+                    <span class="config-selected-val" id="selectedSimLabel">Global (eSIM + Nano)</span>
+                  </div>
+                  <div class="option-grid option-grid-2" id="simOptions" role="radiogroup" aria-label="SIM turini tanlash"></div>
+                </div>
+
+                <!-- 4. Protection & Accessories -->
+                <div class="config-block">
+                  <div class="config-block-head">
+                    <span class="config-label">To'plam va himoya</span>
+                  </div>
+                  <div class="option-grid option-grid-2" id="bundleOptions" role="radiogroup" aria-label="To'plam turini tanlash"></div>
+                </div>
+
+                <!-- Quick Hardware Snapshot -->
+                <div class="quick-specs-strip" id="quickSpecsStrip"></div>
+
+                <!-- Contiguous Price & Purchase Actions -->
+                <div class="purchase-footer">
+                  <div class="price-summary">
+                    <div class="price-main tabular-nums" id="configPriceUsd">$1,299</div>
+                    <div class="price-sub tabular-nums" id="configPriceUzs">≈ 16 627 200 so'm</div>
+                  </div>
+
+                  <div class="purchase-cta-row">
+                    <button type="button" class="btn-secondary" id="addToCartBtn">
+                      Savatga qo'shish
+                    </button>
+                    <button type="button" class="btn-primary" id="instantOrderBtn">
+                      Tezkor buyurtma
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-wordmark">MobilSphere</span>
+          <p class="footer-copy">Toshkent, Amir Temur ko'chasi 108 · Har kuni 09:00 – 22:00</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#catalog">Katalog</a>
+          <a href="#specs">Xususiyatlar</a>
+          <a href="#studio">3D Studiya</a>
+          <a href="https://sketchfab.com/tags/phone" target="_blank" rel="noopener noreferrer">Sketchfab 3D</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart & Telegram Checkout Slide-Over Drawer -->
+    <div class="drawer-backdrop" id="cartBackdrop" hidden></div>
+    <aside
+      class="cart-drawer"
+      id="cartDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="drawerTitle"
+      hidden
+    >
+      <div class="drawer-header">
+        <div>
+          <h2 class="drawer-title" id="drawerTitle">Buyurtma va savat</h2>
+          <p class="drawer-subtitle" id="drawerSubtitle">Ma'lumotlar Telegram kanalga avtomatik yuboriladi</p>
+        </div>
+        <button type="button" class="drawer-close-btn" id="closeCartBtn" aria-label="Oynani yopish">
+          <svg class="icon-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-body" id="drawerBody">
+        <!-- Cart Items List -->
+        <div class="cart-items-list" id="cartItemsList"></div>
+
+        <!-- Empty Cart State -->
+        <div class="cart-empty" id="cartEmptyState" hidden>
+          <p class="cart-empty-title">Savatingiz hozircha bo'sh</p>
+          <p class="cart-empty-desc">Katalogdan smartfon tanlang yoki 3D studiyada rang va xotirasini sozlab savatga qo'shing.</p>
+          <button type="button" class="btn-primary" id="browseFromEmptyBtn">Katalogga o'tish</button>
+        </div>
+
+        <!-- Telegram Order Form -->
+        <form class="checkout-form" id="checkoutForm" novalidate>
+          <h3 class="checkout-section-title">Mijoz ma'lumotlari</h3>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-label">Ism va familiya *</span>
+              <input
+                type="text"
+                name="customerName"
+                id="customerName"
+                placeholder="Masalan: Azizbek Karimov"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="form-row form-row-2">
+            <label class="form-field">
+              <span class="form-label">Telefon raqam *</span>
+              <input
+                type="tel"
+                name="customerPhone"
+                id="customerPhone"
+                placeholder="+998 90 123 45 67"
+                required
+              />
+            </label>
+
+            <label class="form-field">
+              <span class="form-label">Hudud / Shahar *</span>
+              <select name="customerCity" id="customerCity" required>
+                <option value="Toshkent shahri">Toshkent shahri</option>
+                <option value="Toshkent viloyati">Toshkent viloyati</option>
+                <option value="Samarqand">Samarqand</option>
+                <option value="Buxoro">Buxoro</option>
+                <option value="Farg'ona">Farg'ona</option>
+                <option value="Andijon">Andijon</option>
+                <option value="Namangan">Namangan</option>
+                <option value="Boshqa viloyat">Boshqa viloyat</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-label">Yetkazib berish manzili *</span>
+              <input
+                type="text"
+                name="customerAddress"
+                id="customerAddress"
+                placeholder="Tuman, ko'cha, uy va xonadon raqami"
+                required
+              />
+            </label>
+          </div>
+
+          <div class="form-row form-row-2">
+            <label class="form-field">
+              <span class="form-label">To'lov turi</span>
+              <select name="paymentMethod" id="paymentMethod">
+                <option value="Naqd pul (yetkazib berganda)">Naqd pul (yetkazib berganda)</option>
+                <option value="Click / Payme">Click / Payme</option>
+                <option value="Bank kartasi / Terminal">Bank kartasi / Terminal</option>
+                <option value="12 oy muddatli to'lov">12 oy muddatli to'lov</option>
+              </select>
+            </label>
+
+            <label class="form-field">
+              <span class="form-label">Telegram username (ixtiyoriy)</span>
+              <input
+                type="text"
+                name="customerTelegram"
+                id="customerTelegram"
+                placeholder="@username"
+              />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-label">Qo'shimcha izoh</span>
+              <textarea
+                name="customerNote"
+                id="customerNote"
+                rows="2"
+                placeholder="Yetkazish vaqti yoki qo'shimcha istaklar..."
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="form-feedback" id="formFeedback" role="alert" hidden></div>
+
+          <div class="checkout-totals">
+            <div class="total-row">
+              <span>Yetkazib berish</span>
+              <span class="tabular-nums">Bepul</span>
+            </div>
+            <div class="total-row total-row-grand">
+              <span>Jami to'lov</span>
+              <div class="total-amounts">
+                <span class="tabular-nums total-usd" id="cartTotalUsd">$0</span>
+                <span class="tabular-nums total-uzs" id="cartTotalUzs">0 so'm</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary btn-submit-order" id="submitOrderBtn">
+            Buyurtmani Telegramga yuborish
+          </button>
+        </form>
+
+        <!-- Order Confirmed State -->
+        <div class="order-success" id="orderSuccessState" hidden>
+          <div class="success-icon-wrap" aria-hidden="true">
+            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          </div>
+          <h3 class="success-title" id="successOrderNumber">Buyurtma #MS-1001 yuborildi</h3>
+          <p class="success-desc">
+            Barcha tanlangan smartfon xususiyatlari va aloqa ma'lumotlaringiz Telegram kanalimizga muvaffaqiyatli jo'natildi. Operator tez orada bog'lanadi.
+          </p>
+          <div class="success-receipt" id="successReceipt"></div>
+          <button type="button" class="btn-primary" id="newOrderBtn">Yangi buyurtma boshlash</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Toast Feedback -->
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="/src/js/app.js"></script>
+  </body>
+</html>
